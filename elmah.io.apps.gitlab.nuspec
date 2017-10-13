@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>$version$</version>
+    <authors>elmah.io</authors>
+    <owners>elmah.io</owners>
+    <id>elmah.io.apps.gitlab</id>
+    <title>GitLab Integration</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Create a new issue in GitLab when a new error is logged on elmah.io.</description>
+    <projectUrl>https://github.com/elmahio/elmah.io.apps.gitlab</projectUrl>
+    <iconUrl>https://elmah.io/images/appstore/elmah.io.apps.gitlab.png</iconUrl>
+	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing GitLab</tags>
+  </metadata>
+  <files>
+    <file src="manifest.json" target="manifest.json" />
+  </files>
+</package>

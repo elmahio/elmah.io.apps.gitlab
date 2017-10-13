@@ -1,0 +1,37 @@
+{
+	"variables": [{
+		"key": "url",
+		"name": "URL",
+		"description": "The URL of your GitLab installation",
+		"example": "https://gitlab.com",
+		"type": "text",
+		"required": true,
+		"default": "https://gitlab.com"
+	},{
+		"key": "token",
+		"name": "Token",
+		"description": "A Personal Access Token from GitLab needed to call the GitLab API",
+		"example": "cNGgJSpKHCyny18wBQk7",
+		"type": "text",
+		"required": true
+	},{
+		"key": "project",
+		"name": "Project",
+		"description": "The ID or URL-encoded path of the project owned by the authenticated user",
+		"example": "4",
+		"type": "text",
+		"required": true
+	}],
+	"rule": {
+		"title": "Create a new issue in GitLab on all new errors",
+		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
+		"then": {
+			"type": "http",
+			"url": "$url/api/v4/projects/$project/issues?private_token=$token",
+			"method": "post",
+			"body": "{ \"title\":\"$message\", \"description\": \"Time: $time\\nURL: $url\\nHostname: $hostName\\nStatus Code: $statusCode\\nType: $type\\nSource: $source\\nUser: $user\"}",
+			"contentType": "application/json",
+			"testUrl": "$url/api/v4/projects/$project/issues?private_token=$token"
+		}
+	}
+}
