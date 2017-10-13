@@ -29,7 +29,7 @@
 			"type": "http",
 			"url": "$url/api/v4/projects/$project/issues?private_token=$token",
 			"method": "post",
-			"body": "{ \"title\":\"$message\", \"description\": \"Time: $time\\n\\nURL: $url\\n\\nHostname: $hostName\\n\\nStatus Code: $statusCode\\n\\nType: $type\\n\\nSource: $source\\n\\nUser: $user\"}",
+			"body": "{ \"title\":\"$severity on $logName: $type\", \"description\": \" $message %0D%0A### Error Details %0D%0A|Error Detail|Value| | -------- | -------- | |Application|$applicationName| |Severity|$severity| |Url|[$method] $url| |Status Code|$statusCode| |Error|$type| |Version|$version| |Source|$source| |Browser|$browser| |User|$user| |HostName|$hostName| %0D%0A### Stack Trace %0D%0A```c#%0D%0A$detail%0D%0A```\", \"labels\": \"bug,elmah.io\"}",
 			"contentType": "application/json",
 			"testUrl": "$url/api/v4/projects/$project/issues?private_token=$token"
 		}
