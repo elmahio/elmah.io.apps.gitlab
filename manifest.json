@@ -29,7 +29,7 @@
 			"type": "http",
 			"url": "$url/api/v4/projects/$project/issues?private_token=$token",
 			"method": "post",
-			"body": "{ \"title\":\"$message\", \"description\": \"Time: $time\\nURL: $url\\nHostname: $hostName\\nStatus Code: $statusCode\\nType: $type\\nSource: $source\\nUser: $user\"}",
+			"body": "{ \"title\":\"$message\", \"description\": \"Time: $time\\n\\nURL: $url\\n\\nHostname: $hostName\\n\\nStatus Code: $statusCode\\n\\nType: $type\\n\\nSource: $source\\n\\nUser: $user\"}",
 			"contentType": "application/json",
 			"testUrl": "$url/api/v4/projects/$project/issues?private_token=$token"
 		}
