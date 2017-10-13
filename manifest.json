@@ -29,7 +29,7 @@
 			"type": "http",
 			"url": "$baseUrl/api/v4/projects/$project/issues?private_token=$token",
 			"method": "post",
-			"body": "title=$severity on $logName: $type&labels=bug,elmah.io&description=## Error Message%0D%0A> $message%0D%0A%0D%0AOriginal error log on elmah.io: https://elmah.io/errorlog/error?logid=$logId%26id=$id#errorDetailsTab%0D%0A### Error Details%0D%0A|Error Detail|Value|%0D%0A| -------- | -------- |%0D%0A|Application|$applicationName|%0D%0A|Severity|$severity|%0D%0A|Url|[$method] $url|%0D%0A|Status Code|$statusCode|%0D%0A|Error|$type|%0D%0A|Version|$version|%0D%0A|Source|$source|%0D%0A|Browser|$browser|%0D%0A|User|$user|%0D%0A|HostName|$hostName|%0D%0A### Stack Trace / Details%0D%0A```c#%0D%0A$detail%0D%0A```",
+			"body": "title=$severity on $logName: $type&labels=bug,elmah.io&description=## Error Message%0D%0A> $message%0D%0A%0D%0AOriginal error log on elmah.io: https://elmah.io/errorlog/error?logid=$logId%26id=$id#errorDetailsTab%0D%0A### Error Details%0D%0A|Error Detail|Value|%0D%0A| -------- | -------- |%0D%0A|Application|$applicationName|%0D%0A|Severity|$severity|%0D%0A|URL|$methodMarkdown $url|%0D%0A|Status Code|$statusCodeMarkdown|%0D%0A|Error|$type|%0D%0A|Version|$version|%0D%0A|Source|$source|%0D%0A|Browser|$browser|%0D%0A|User|$user|%0D%0A|HostName|$hostName|%0D%0A### Stack Trace / Details%0D%0A```c#%0D%0A$detail%0D%0A```",
 			"contentType": "application/x-www-form-urlencoded",
 			"testUrl": "$baseUrl/api/v4/projects/$project/issues?private_token=$token"
 		}
