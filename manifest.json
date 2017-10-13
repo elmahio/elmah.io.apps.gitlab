@@ -29,8 +29,8 @@
 			"type": "http",
 			"url": "$url/api/v4/projects/$project/issues?private_token=$token",
 			"method": "post",
-			"body": "{ \"title\":\"$severity on $logName: $type\", \"description\": \" ## Error Message > $message Original error log on elmah.io: https://elmah.io/errorlog/error?logid=$logId%26id=$id#errorDetailsTab ### Error Details |Error Detail|Value| | -------- | -------- | |Application|$applicationName| |Severity|$severity| |Url|[$method] $url| |Status Code|$statusCode| |Error|$type| |Version|$version| |Source|$source| |Browser|$browser| |User|$user| |HostName|$hostName| ### Stack Trace / Details ```c# $detail ```\", \"labels\": \"bug,elmah.io\"}",
-			"contentType": "application/json",
+			"body": "title=$severity on $logName: $type&labels=bug,elmah.io&description= ## Error Message > $message Original error log on elmah.io: https://elmah.io/errorlog/error?logid=$logId%26id=$id#errorDetailsTab ### Error Details |Error Detail|Value| | -------- | -------- | |Application|$applicationName| |Severity|$severity| |Url|[$method] $url| |Status Code|$statusCode| |Error|$type| |Version|$version| |Source|$source| |Browser|$browser| |User|$user| |HostName|$hostName| ### Stack Trace / Details ```c# $detail ```",
+			"contentType": "application/x-www-form-urlencoded",
 			"testUrl": "$url/api/v4/projects/$project/issues?private_token=$token"
 		}
 	}
