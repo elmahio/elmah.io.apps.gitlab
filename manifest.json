@@ -12,7 +12,7 @@
 		"name": "Token",
 		"description": "A Personal Access Token from GitLab needed to call the GitLab API",
 		"example": "cNGgJSpKHCyny18wBQk7",
-		"type": "text",
+		"type": "password",
 		"required": true
 	},{
 		"key": "project",
