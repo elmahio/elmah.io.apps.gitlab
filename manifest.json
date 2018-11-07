@@ -1,4 +1,5 @@
 {
+	"helpUrl": "https://docs.elmah.io/elmah-io-apps-gitlab/",
 	"variables": [{
 		"key": "baseUrl",
 		"name": "URL",
