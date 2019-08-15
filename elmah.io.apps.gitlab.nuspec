@@ -6,12 +6,13 @@
     <owners>elmah.io</owners>
     <id>elmah.io.apps.gitlab</id>
     <title>GitLab Integration</title>
+    <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Create a new issue in GitLab when a new error is logged on elmah.io.</description>
     <projectUrl>https://elmah.io/</projectUrl>
     <repository type="git" url="https://github.com/elmahio/elmah.io.apps.gitlab" />
     <iconUrl>https://elmah.io/images/appstore/elmah.io.apps.gitlab.png</iconUrl>
-	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing GitLab</tags>
+    <tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing GitLab</tags>
   </metadata>
   <files>
     <file src="manifest.json" target="manifest.json" />
