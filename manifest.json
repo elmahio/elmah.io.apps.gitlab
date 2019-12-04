@@ -25,7 +25,7 @@
 	}],
 	"rule": {
 		"title": "Create a new issue in GitLab on all new errors",
-		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
+		"query": "isNew:true AND (severity:Error OR severity:Fatal) AND NOT isUptime:true AND NOT isHeartbeat:true",
 		"then": {
 			"type": "http",
 			"url": "$baseUrl/api/v4/projects/$project/issues?private_token=$token",
